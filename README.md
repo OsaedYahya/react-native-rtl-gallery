@@ -32,8 +32,8 @@ yarn add react-native-rtl-gallery
 
 | Property | Required | Type | Default | Description |
 |-------------|----|----------|-------|--------------------------------------------------------------|
-| imageProps | No | ImageProps | Default image props for the outer image |
-| galleryProps | No | GalleryExtraProps | Props to be passed to Gallery |
+| imageProps | No | ImageProps | {} | Default image props for the outer image |
+| galleryProps | No | GalleryExtraProps | {} | Props to be passed to Gallery |
 | images | Yes | GalleryImage[] | [] | Array of images in Gallery |
 | onGalleryClosedCb | No | Function | () => undefined | Function that's triggered on gallery close |
 
