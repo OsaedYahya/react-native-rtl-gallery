@@ -4,7 +4,7 @@ React native calendar range picker
 
 ### Preview
 
-<img src="https://user-images.githubusercontent.com/69788216/207125617-049ed8d5-15ec-4c9f-af58-fbaa5c81c911.gif" width="20%" height="20%">
+<img src="https://user-images.githubusercontent.com/69788216/207879582-128d1c39-a8ce-48b9-b668-53904718acb3.gif" width="20%" height="20%">
 
 ## Getting Started
 
@@ -12,11 +12,11 @@ React native calendar range picker
 
 npm
 ```bash
-npm i react-native-calendar-date-range-picker
+npm i react-native-rtl-gallery
 ````
 Yarn
 ```
-yarn add react-native-calendar-date-range-picker
+yarn add react-native-rtl-gallery
 ```
 
 ### Props
@@ -24,41 +24,25 @@ yarn add react-native-calendar-date-range-picker
 
 | Property | Required | Type | Default | Description |
 |-------------|----|----------|-------|--------------------------------------------------------------|
-| onChangeCb | No | (SelectedRangeType) => void | () => void | Function that gets triggered on any selection change |
-| onDonePressedCb | No | (SelectedRangeType) => void | () => void | When done button is pressed |
-| theme | No | DayStyles | {} | styles for calendar/day components|
-| monthHeight| No  | Number | 300 | Approximate height for each month (along with days) |
-| monthsCount | No | Number | 12 | Number of months starting from minDate |
-| minDate | No | Moment | undefined | Starting date
-| initialSelectedRange | No | SelectedRangeType | {startDate: moment(),endDate: moment().add(1, "day"),} | initially selected range |
-| useGestureHandler | No | Boolean | false | Enable if Flatlist should be imported from "react-native-gesture-handler" |
-| renderWeekTextComponent | No | JSX.Element | <Text /> | Function that returns custom render for each week |
-| renderMonthTextComponent | No | JSX.Element | <Text /> | Function that returns custom render for each month title |
-| renderFooterComponent | No | JSX.Element | <Button /> | Function that returns custom render footer component |
+| imageProps | No | ImageProps | Default image props for the outer image |
+| galleryProps | No | GalleryExtraProps | Props to be passed to Gallery |
+| images | Yes | GalleryImage[] | [] | Array of images in Gallery |
+| onGalleryClosedCb | No | Function | () => undefined | Function that's triggered on gallery close |
+
+GalleryExtraProps
+| Property | Required | Type | Default | Description |
+|-------------|----|----------|-------|--------------------------------------------------------------|
+| rightComponent | No | ReactNode | undefined | Create right header component on gallery |
+| leftComponent | No | ReactNode | undefined | Replace back component on gallery |
+| bottomBarContent | No | ReactNode | undefined | Add bottom component to gallery |
 
 
 ## Types
 
 ```
-DayStyles {
-  unselectedContainerStyle?: ViewStyle;
-  endContainerStyle?: ViewStyle;
-  startingContainerStyle?: ViewStyle;
-  startingWithEndContainerStyle?: ViewStyle;
-  endingContainerStyle?: ViewStyle;
-  betweenContainerStyle?: ViewStyle;
-  disabledTextStyle?: TextStyle;
-  emptyDay?: TextStyle;
-  dayTextStyle?: TextStyle;
-  selectedDayTextStyle?: TextStyle;
-  startSelectedDayTextStyle?: TextStyle;
-  endSelectedDayTextStyle?: TextStyle;
-}
-```
-```
-SelectedRangeType {
-  startDate: Moment;
-  endDate: Moment | null;
-}
+GalleryImage {
+  id: string;
+  uri: string;
+};
 ```
 
