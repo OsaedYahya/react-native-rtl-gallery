@@ -10,6 +10,14 @@ React native calendar range picker
 
 ### Installation
 
+Requirements 
+```
+yarn add react-native-reanimated-zoom react-native-safe-area-context react-native-gesture-handler recyclerlistview
+```
+```
+npm i react-native-reanimated-zoom react-native-safe-area-context react-native-gesture-handler recyclerlistview
+```
+
 npm
 ```bash
 npm i react-native-rtl-gallery
