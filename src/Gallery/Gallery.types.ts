@@ -1,8 +1,7 @@
 import { ReactNode } from "react";
 export type GalleryImage = {
+  id: string;
   uri: string;
-  name?: string;
-  description?: string;
 };
 
 export type GalleryExtraProps = {

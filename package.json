@@ -25,7 +25,6 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
-    "moment": "*",
     "react-native-reanimated-zoom": "*",
     "react-native-gesture-handler": "*",
     "react-native-safe-area-context": "*",
