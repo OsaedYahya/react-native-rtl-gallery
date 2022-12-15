@@ -1,5 +1,5 @@
 import React, { memo, useCallback, useMemo, useState } from "react";
-import { View, TouchableOpacity, Text } from "react-native";
+import { View, TouchableOpacity, Text, Dimensions } from "react-native";
 
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { createZoomListComponent } from "react-native-reanimated-zoom";
@@ -10,7 +10,9 @@ import { styles } from "./Gallery.styles";
 import { GalleryProps } from "./Gallery.types";
 
 import { ZoomableImage } from "../ZoomableImage";
-import { APP_SCREEN_HEIGHT, APP_SCREEN_WIDTH } from "~/constants/";
+
+const APP_SCREEN_HEIGHT = Dimensions.get("window").height;
+const APP_SCREEN_WIDTH = Dimensions.get("window").width;
 
 const ZoomFlatList = createZoomListComponent(RecyclerListView);
 
@@ -44,6 +46,7 @@ const Gallery = (props: GalleryProps) => {
     closeButtonContainer,
     currentImageNumberChip,
     dividerStyle,
+    textStyle,
     fullSize,
     width10percent,
     galleryBackground,
@@ -58,18 +61,18 @@ const Gallery = (props: GalleryProps) => {
               leftComponent
             ) : (
               <View style={closeButtonContainer}>
-                <Text>Close</Text>
+                <Text style={textStyle}>Close</Text>
               </View>
             )}
           </TouchableOpacity>
           <View style={currentImageNumberChip}>
-            <Text>
+            <Text style={textStyle}>
               {index + 1}
             </Text>
             <Text style={dividerStyle}>
               /
             </Text>
-            <Text>
+            <Text style={textStyle}>
               {images.length}
             </Text>
           </View>

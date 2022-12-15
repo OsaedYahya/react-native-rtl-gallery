@@ -1,8 +1,9 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
 import { EdgeInsets } from "react-native-safe-area-context";
 
-import { APP_SCREEN_HEIGHT, APP_SCREEN_WIDTH } from "~/constants/";
+const APP_SCREEN_HEIGHT = Dimensions.get("window").height;
+const APP_SCREEN_WIDTH = Dimensions.get("window").width;
 
 export const styles = (insets: EdgeInsets) =>
   StyleSheet.create({
@@ -12,6 +13,9 @@ export const styles = (insets: EdgeInsets) =>
     galleryBackground: {
       backgroundColor: "#323232",
       flex: 1,
+    },
+    textStyle: {
+       color: "white",
     },
     closeButtonContainer: {
       padding: 10,
@@ -57,6 +61,7 @@ export const styles = (insets: EdgeInsets) =>
     },
     dividerStyle: {
       marginHorizontal: 6,
+      color: "white",
     },
     barContentContainerTop: {
       flexDirection: "row",
