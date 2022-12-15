@@ -1,5 +1,5 @@
 
-import { Gallery } from './src/Gallery';
+import { GalleryImage } from './src/GalleryImage';
 
 export {
     GalleryExtraProps,
@@ -7,4 +7,4 @@ export {
     GalleryProps,
 } from './src/Gallery/Gallery.types'
 
-export default Gallery;
+export default GalleryImage;
