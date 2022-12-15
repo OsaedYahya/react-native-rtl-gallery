@@ -1,5 +1,5 @@
-# react-native-calendar-date-range-picker
-React native calendar range picker
+# react-native-rtl-gallery
+React native RTL Gallery
 [![Version](https://img.shields.io/npm/v/react-native-calendar-date-range-picker.svg)](https://www.npmjs.com/package/react-native-calendars)
 
 ### Preview
